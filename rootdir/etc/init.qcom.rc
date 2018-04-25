@@ -60,6 +60,9 @@ on init
     # ZRAM setup
     write /proc/sys/vm/page-cluster 0
 
+    # Disable sched autogroup
+    write /proc/sys/kernel/sched_autogroup_enabled 0
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
