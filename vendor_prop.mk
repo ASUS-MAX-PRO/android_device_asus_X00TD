@@ -194,6 +194,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qti.telephony.vt_cam_interface=1 \
     ril.subscription.types=NV,RUIM \
     rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
+    persist.vendor.radio.procedure_bytes=SKIP \
     ro.carrier=unknown \
     ro.com.android.dataroaming=false \
     ro.config.vc_call_vol_steps=11 \
