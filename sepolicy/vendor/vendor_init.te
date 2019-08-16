@@ -15,3 +15,6 @@ allow vendor_init {
 
 allow vendor_init media_rw_data_file:file create_file_perms;
 allow vendor_init system_data_file:lnk_file create;
+
+# this is for ramdump
+allow vendor_init block_device:lnk_file setattr;
