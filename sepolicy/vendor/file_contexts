@@ -8,6 +8,9 @@
 /firmware                                                                     u:object_r:firmware_file:s0
 /bt_firmware                                                                  u:object_r:bt_firmware_file:s0
 
+# Keylayout
+/(system/)?vendor/usr/keylayout(/.*)?                                   u:object_r:vendor_keylayout_file:s0
+
 # Sensors
 /sys/devices/virtual/input/input[0-9]+/stk3x1x-proximity(/.*)?          u:object_r:sysfs_sensors:s0
 /sys/devices/virtual/input/input[0-9]+/stk3x1x-light(/.*)?              u:object_r:sysfs_sensors:s0
