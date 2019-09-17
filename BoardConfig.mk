@@ -207,6 +207,8 @@ BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
     /vendor/firmware_mnt:/firmware
 
+TARGET_COPY_OUT_PRODUCT := system/product
+
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
 
