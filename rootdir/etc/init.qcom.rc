@@ -63,6 +63,9 @@ on init
     # Disable sched autogroup
     write /proc/sys/kernel/sched_autogroup_enabled 0
 
+    # Hack for camera hal
+    mount none /system/lib/libprocessgroup.so /system/lib/vndk-29/libprocessgroup.so bind
+
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 

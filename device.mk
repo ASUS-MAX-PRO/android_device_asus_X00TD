@@ -423,8 +423,12 @@ PRODUCT_COPY_FILES += \
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
-    libqti_vndfwk_detect \
-    libvndfwk_detect_jni.qti
+    libqti_vndfwk_detect.vendor \
+    libvndfwk_detect_jni.qti.vendor
+
+# QNS
+PRODUCT_PACKAGES += \
+    libstdc++.vendor
 
 # Seccomp
 PRODUCT_COPY_FILES += \
@@ -496,7 +500,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK-SP:
 PRODUCT_PACKAGES += \
-    vndk-sp
+    vndk_package
 
 # VR
 PRODUCT_PACKAGES += \

@@ -73,6 +73,9 @@ TARGET_KERNEL_CLANG_COMPILE := true
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
+# Treble
+BOARD_VNDK_VERSION := current
+
 # APEX image
 DEXPREOPT_GENERATE_APEX_IMAGE := true
 
