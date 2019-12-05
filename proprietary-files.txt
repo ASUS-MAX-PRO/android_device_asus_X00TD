@@ -88,6 +88,7 @@ vendor/lib64/hw/audio.primary.sdm660.so
 vendor/lib64/libaudio_log_utils.so
 
 # Audio extensions
+vendor/lib64/btaudio_offload_if.so
 vendor/lib64/liba2dpoffload.so
 vendor/lib64/libbatterylistener.so
 vendor/lib64/libcomprcapture.so
@@ -106,6 +107,7 @@ vendor/lib/libhdmipassthru.so
 vendor/lib/libhfp.so
 vendor/lib/libsndmonitor.so
 vendor/lib/libspkrprot.so
+vendor/lib/btaudio_offload_if.so
 
 # Audio ACDB
 vendor/etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
