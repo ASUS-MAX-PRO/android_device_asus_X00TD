@@ -28,6 +28,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from X00TD device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Google Connectivity Services
+TARGET_INCLUDE_WIFI_EXT := true
+
 PRODUCT_BRAND := asus
 PRODUCT_DEVICE := X00TD
 PRODUCT_MANUFACTURER := asus
