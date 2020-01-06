@@ -48,6 +48,14 @@ using android::base::ReadFileToString;
 using android::base::Trim;
 using android::init::property_set;
 
+char const *heapstartsize;
+char const *heapgrowthlimit;
+char const *heapsize;
+char const *heaptargetutilization;
+char const *heapminfree;
+char const *heapmaxfree;
+char const *bg_apps_limit;
+
 void property_override(char const prop[], char const value[])
 {
     prop_info *pi;
@@ -166,8 +174,61 @@ void vendor_check_variant()
     property_set("ro.config.versatility", region);
 }
 
+void init_dalvik_vm_properties()
+{
+    struct sysinfo sys;
+
+    sysinfo(&sys);
+
+    if (sys.totalram > 2048ull * 1024 * 1024) {
+        // from - phone-xhdpi-3072-dalvik-heap.mk
+        heapstartsize = "8m";
+        heapgrowthlimit = "288m";
+        heapsize = "768m";
+        heaptargetutilization = "0.75";
+        heapminfree = "512k";
+        heapmaxfree = "8m";
+
+        // Cached apps limit
+        bg_apps_limit = "24";;
+
+    } else if (sys.totalram > 3072ull * 1024 * 1024) {
+        // from - phone-xhdpi-4096-dalvik-heap.mk
+        heapstartsize = "8m";
+        heapgrowthlimit = "192m";
+        heapsize = "512m";
+        heaptargetutilization = "0.6";
+        heapminfree = "8m";
+        heapmaxfree = "6m";
+
+        // Cached apps limit
+        bg_apps_limit = "36";
+
+    } else {
+        // from - phone-xhdpi-6144-dalvik-heap.mk
+        heapstartsize = "16m";
+        heapgrowthlimit = "256m";
+        heapsize = "512m";
+        heaptargetutilization = "0.5";
+        heapminfree = "8m";
+        heapmaxfree = "32m";
+
+        // Cached apps limit
+        bg_apps_limit = "48";
+    }
+}
+
 void vendor_load_properties()
 {
     init_alarm_boot_properties();
+    init_dalvik_vm_properties();
     vendor_check_variant();
+
+    property_set("dalvik.vm.heapstartsize", heapstartsize);
+    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    property_set("dalvik.vm.heapsize", heapsize);
+    property_set("dalvik.vm.heaptargetutilization", heaptargetutilization);
+    property_set("dalvik.vm.heapminfree", heapminfree);
+    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+    property_set("ro.vendor.qti.sys.fw.bg_apps_limit", bg_apps_limit);    
 }
