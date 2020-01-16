@@ -175,9 +175,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.dbg.volte_avail_ovr=1 \
-    persist.dbg.vt_avail_ovr=1 \
-    persist.dbg.wfc_avail_ovr=1 \
     DEVICE_PROVISIONED=1 \
     persist.data.iwlan.enable=true \
     persist.radio.multisim.config=dsds \
@@ -202,6 +199,14 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.flexmap_type=none \
     persist.sys.fflag.override.settings_network_and_internet_v2=true
 
+# VoLTE / VoWifi -Radio
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.dbg.ims_volte_enable=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
+    persist.radio.calls.on.ims=1
+    
 # RmNet Data
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.data.df.dev_name=rmnet_usb0 \
