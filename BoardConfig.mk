@@ -177,6 +177,7 @@ TARGET_TAP_TO_WAKE_NODE := "/sys/kernel/touchpanel/dclicknode"
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
