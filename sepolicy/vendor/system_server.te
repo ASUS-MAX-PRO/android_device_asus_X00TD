@@ -1,1 +1,4 @@
 r_dir_file(system_server, vendor_keylayout_file)
+
+# Allow system_server to set persist_camera_prop
+get_prop(system_server, persist_camera_prop)
