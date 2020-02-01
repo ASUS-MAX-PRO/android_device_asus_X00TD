@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2018 The LineageOS Open Source Project
+# Copyright (C) 2018-2020 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -90,6 +90,7 @@ BOARD_USES_ALSA_AUDIO := true
 USE_XML_AUDIO_POLICY_CONF := 1
 USE_CUSTOM_AUDIO_POLICY := 1
 TARGET_USES_AOSP_FOR_AUDIO := true
+TARGET_PROVIDES_AUDIO_EXTNS := true
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH_QCOM := true
