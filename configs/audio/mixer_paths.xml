@@ -1873,10 +1873,6 @@
         <path name="headphones" />
     </path>
 
-    <path name="headphones-hifi-filter">
-        <path name="headphones" />
-    </path>
-
     <path name="headset-mic">
         <path name="adc2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
@@ -1931,11 +1927,6 @@
     </path>
 
     <path name="speaker-and-headphones">
-        <path name="headphones" />
-        <path name="speaker" />
-    </path>
-
-    <path name="speaker-and-headphones-hifi-filter">
         <path name="headphones" />
         <path name="speaker" />
     </path>
@@ -2209,7 +2200,7 @@
         <path name="handset-mic" />
     </path>
 
-    <path name="unprocessed-stereo-mic">
+	<path name="unprocessed-stereo-mic">
         <path name="voice-rec-dmic-ef" />
     </path>
 
@@ -2224,7 +2215,7 @@
     <path name="voice-headset">
         <path name="headphones" />
     </path>
-
+    
     <path name="unprocessed-mic">
         <path name="unprocessed-handset-mic" />
     </path>
