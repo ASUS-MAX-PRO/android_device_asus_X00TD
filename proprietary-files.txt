@@ -1292,7 +1292,7 @@ vendor/lib64/libqmiservices.so|ce02c352542463b384b584d05c5f350203ae867c
 product/etc/permissions/qcrilhook.xml|ceb890ab3c1645aa0d0044abab1ba58c4097a991
 product/etc/permissions/telephonyservice.xml|a39eefcaf85fb8da60044fdbbcfddd95deb031c8
 product/framework/qcrilhook.jar|68bd76620a2c5ba5b5870638b6c175ed8f30d99d
-product/framework/qti-telephony-common.jar
+product/framework/qti-telephony-common.jar|22492a39dc26e88abd1b629ddad659c90c8d64e2
 product/framework/QtiTelephonyServicelibrary.jar|ea30b05eaad3ebee157421b3f31bf8585566b4cd
 vendor/bin/ATFWD-daemon|f9f98500db88ff7ce7157bfefae07594016505a7
 vendor/bin/adpl|d55783db5aae7ad829ef7fd04dd9b7b67f18ede2
