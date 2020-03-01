@@ -402,6 +402,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     librecovery_updater_X00TD
 
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
+    
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.4 \
